@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<a href="http://www.baidu.com" id="link">注册成功，10秒后跳转</a>
+<script>
+  var link = document.getElementById("link");
+  var num = 10;
+  var timer = setInterval(function () {
+    num--;
+    link.innerHTML = "注册成功," + num + "秒后跳转";
+    if(num == 0){
+      clearInterval(timer);
+      location.href = "http://www.baidu.com";
+    }
+  },1000)
+</script>
+</body>
+</html>

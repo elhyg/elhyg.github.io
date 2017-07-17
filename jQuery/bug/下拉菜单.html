@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    ul {
+      list-style: none;
+    }
+    
+    .wrap {
+      width: 330px;
+      height: 30px;
+      margin: 100px auto 0;
+      padding-left: 10px;
+    }
+    
+    .wrap > ul > li {
+      float: left;
+      margin-right: 10px;
+      position: relative;
+    }
+    
+    .wrap a {
+      display: block;
+      height: 30px;
+      width: 100px;
+      text-decoration: none;
+      color: #000;
+      line-height: 30px;
+      text-align: center;
+    }
+    
+    .wrap li ul {
+      position: absolute;
+      top: 30px;
+      display: none;
+    }
+  
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <ul>
+    <li>
+      <ul>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+      </ul>
+      <a href="#">一级菜单</a></li>
+    <li>
+      <ul>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+      </ul>
+      <a href="#">一级菜单</a></li>
+    <li>
+      <ul>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+        <li>二级菜单</li>
+      </ul>
+      <a href="#">一级菜单</a></li>
+  </ul>
+</div>
+
+<script src="jquery-1.12.4.js"></script>
+<script>
+  $(function () {
+    $(".wrap>ul>li").click(function () {
+      
+      if($(".wrap>ul>li").hasClass('choosed')){
+        $(this).removeClass('choosed')
+          .children("ul").hide()
+          .parent().siblings().removeClass('choosed').children('ul').hide();
+       
+        
+      }else{
+        $(this).addClass('choosed')
+          .children("ul").show()
+          .parent().siblings().removeClass('choosed').children('ul').hide();
+      }
+    })
+    
+    /*$(".wrap>ul>li").mouseleave(function () {
+      $(this).children("ul").stop().slideUp();
+    })*/
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="随机" id="btn">
+<div id="box"></div>
+
+<script>
+  var btn = document.getElementById("btn");
+  var box = document.getElementById("box");
+  btn.onclick = function () {
+    box.style.position = "absolute";
+    var x = parseInt(Math.random() * 701) + 100;
+    box.style.left = x + "px";
+    var y = parseInt(Math.random() * 401 )  + 50;
+    box.style.top = y + "px";
+  }
+
+</script>
+
+</body>
+</html>

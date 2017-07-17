@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #box{
+      width: 400px;
+      height: 400px;
+      background-color: cyan;
+    }
+    
+  </style>
+</head>
+<body>
+  <button id="btn">按钮</button>
+<div id="box"></div>
+  <script>
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    btn.onclick = function () {
+      box.innerHTML = box.innerHTML + "<button>我是一个按钮</button>"
+    }
+  </script>
+</body>
+</html>

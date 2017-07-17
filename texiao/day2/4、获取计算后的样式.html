@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      padding: 10px;
+      border: 10px solid black;
+      margin: 10px;
+    }
+    #box{
+      width: 200px;
+      background-color: cyan;
+    }
+  </style>
+</head>
+<body>
+  <div id="box" style="width:300px"></div>
+  <script>
+    var box = document.getElementById("box");
+//    function getStyle(element,attr){
+//      if(window.getComputedStyle){
+//        return window.getComputedStyle(element,null)[attr];
+//      }else{
+//        return element.currentStyle[attr];
+//      }
+//    }
+//    console.log(getStyle(box, "width"));
+//    console.log(getStyle(box, "height"));
+//    兼容IE
+//    console.log(box.currentStyle["width"]);
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+//  将abcdefg字符串翻转
+//  var str = "abcdefg" ;
+//  str = str.split("").reverse().join("");
+//  console.log(str);
+// http://www.baidu.com?name=cc&age=18&desc=呵呵 {name:"cc",age:18,desc:"呵呵"}
+//  var obj = {};
+//  var str = "http://www.baidu.com?name=cc&age=18&desc=呵呵";
+//  var getStr = str.split("?")[1];
+//  var arr = getStr.split("&");
+//  for(var i = 0; i < arr.length; i++){
+//    var key = arr[i].split("=")[0];
+//    var value = arr[i].split("=")[1];
+//    obj[key] = value;
+//  }
+//  console.log(obj);
+  var obj = {name:"cc",age:18,desc:"呵呵"};
+  var arr = [];
+  for(var k in obj){
+    var str = k + "=" + obj[k];
+    arr.push(str);
+  }
+  var getStr = arr.join("&");
+  var result = "http://www.baidu.com?" + getStr;
+console.log(result);
+</script>
+</body>
+</html>

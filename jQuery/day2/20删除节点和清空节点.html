@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .box{
+      width: 400px;
+      height: 400px;
+      background-color: deeppink;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <p>我是老大</p>
+    <span>我最小你不要欺负我</span>
+  </div>
+  <script src="jquery-1.12.4.js"></script>
+  <script>
+    $(function () {
+//         直接设置内容为空
+//        $("div").text("");
+//        把自己删除，俗称自杀
+//      $("span").remove();
+//      添加空覆盖子元素
+//        $("div").html("");
+//      $("p").remove();
+//        自杀，子元素自动死亡
+//      $("div").empty();
+      $("div").remove();
+    })
+
+  </script>
+</body>
+</html>

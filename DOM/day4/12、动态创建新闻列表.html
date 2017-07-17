@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    div{
+      width: 400px;
+      height: 400px;
+      background-color: cyan;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="生成" id="btn">
+<div id="box">
+</div>
+  <script>
+    var arr = [
+      '俄海关"封杀"网购中国小米手机 包裹全数被退回',
+      '司机醉驾遇检查弃车而逃 被抓后称自己是在夜跑',
+      '网瘾少年调查：逾九成缺少父爱，理工男成重灾群体',
+      '女生被人贩子拖拽，怎么证明自己真的不认识他？',
+      '揭秘"最完美公务机"：220平米内部空间 50万/小时',
+      '揭秘"最完美公务机"：220平米内部空间 50万/小时',
+      '揭秘"最完美公务机"：220平米内部空间 50万/小时',
+      '揭秘"最完美公务机"：220平米内部空间 50万/小时',
+      '揭秘"最完美公务机"：220平米内部空间 50万/小时',
+      '揭秘"最完美公务机"：220平米内部空间 50万/小时'
+    ];
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    btn.onclick = function () {
+      if(box.children.length >0){
+        return
+      }
+      var ul = document.createElement("ul");
+      box.appendChild(ul)
+      for(var i = 0; i < arr.length; i++){
+        var li = document.createElement("li");
+        ul.appendChild(li);
+        li.innerHTML = arr[i];
+        if(i % 2 == 0){
+          li.style.backgroundColor = "pink"
+        }else{
+          li.style.backgroundColor = "deeppink"
+        }
+      }
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #box {
+      width: 100px;
+      height: 90px;
+      background-color: hotpink;
+      border-top: 10px solid green;
+      border-radius: 50px 50px 0 0 / 10px 10px 0 0;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="奔跑吧,张学路" id="btn">
+<div id="box"></div>
+<script>
+  var btn = document.getElementById("btn");
+  var box = document.getElementById("box");
+  btn.onclick = function () {
+    setInterval(function () {
+//      leader = leader + step;
+      var step = 10;
+      var leader = box.offsetLeft;
+      leader = step + leader;
+      box.style.left = leader + "px";
+    },15)
+  }
+
+</script>
+</body>
+</html>

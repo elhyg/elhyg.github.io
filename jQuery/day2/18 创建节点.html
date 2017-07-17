@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .box{
+      width: 400px;
+      height: 400px;
+      background-color: #daa520;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div class="box">我有内容</div>
+  <p>我是外面的P标签</p>
+  <script src="jquery-1.12.4.js"></script>
+  <script>
+    var p = document.createElement("p");
+    p.innerHTML = "我是创建的P标签";
+    $(".box").append(p);
+
+
+  </script>
+</body>
+</html>

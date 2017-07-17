@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <p>1111</p>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+      $("p").on("click",function () {
+        console.log("Do you like me?");
+      })
+//      $("P").click()
+      $("p").trigger("click");
+    });
+</script>
+</body>
+</html>

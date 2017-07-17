@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="table.css">
+  <style>
+    table {
+      margin: 0 auto;
+      width: 800px;
+      border: 1px solid #000;
+      border-collapse: collapse;
+    }
+
+
+    th {
+      border: 1px solid #000;
+      height: 30px;
+      background-color: #ccc;
+    }
+
+    td {
+      border: 1px solid #000;
+      height: 30px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+<script src="table.js"></script>
+<script>
+  var result = {
+    "header": ["姓名", "性别", "年龄", "成绩","傻不傻"],
+    "datas": [
+      {"name": "韩思琪", "gender": "女", "age": 18, "salary": 30000,"isStupid": "是"},
+      {"name": "亮亮", "gender": "男", "age": 19, "salary": 50000, "isStupid": "否"},
+      {"name": "聪聪", "gender": "男", "age": 17, "salary": 8000,"isStupid": "是"},
+      {"name": "聪聪", "gender": "男", "age": 17, "salary": 8000, "isStupid": "否"},
+      {"name": "聪聪", "gender": "男", "age": 17, "salary": 8000,"isStupid": "是"},
+      {"name": "聪聪", "gender": "男", "age": 17, "salary": 8000, "isStupid": "否"}
+    ]
+  };
+  createTable(document.body,result);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<button id="btn">按钮</button>
+<script>
+  var btn = document.getElementById("btn");
+  var inputs = document.getElementsByTagName("input");
+  btn.onclick = function () {
+    for(var i = 0; i < inputs.length; i++){
+      if(inputs[i].type == "text"){
+        inputs[i].disabled = true;
+      }
+
+    }
+  }
+</script>
+</body>
+</html>

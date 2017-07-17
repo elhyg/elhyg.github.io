@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>我是一个P元素</p>
+    <p>我是一个P元素</p>
+    <p>我是一个P元素</p>
+  </div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+      $("p").on("click",function () {
+        console.log("你好");
+      })
+      $("div").on("click",function () {
+        console.log("nice to meet you too");
+      })
+      $("div").on("click","p",function () {
+        console.log("nice to meet you");
+      })
+//      清除所有的P元素事件
+//      off解绑事件
+      $("p").off();
+      $("div").off();
+    });
+</script>
+</body>
+</html>

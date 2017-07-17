@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>\</title>
+</head>
+<body>
+  <div>我是一个div</div>
+  <p>我是一个p元素</p>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+      var money = 100;
+      $("div").on("click",null,100,function (e) {
+        console.log("哈哈，我有" + e.data);
+      })
+      $("p").on("click",function () {
+        console.log("哈哈，我有" + money);
+      })
+    });
+</script>
+</body>
+</html>

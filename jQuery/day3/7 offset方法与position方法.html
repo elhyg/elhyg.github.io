@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+    }
+    .father{
+      width: 400px;
+      height: 400px;
+      background-color: pink;
+      margin: 100px;
+      position: relative;
+    }
+    .son{
+      width: 300px;
+      height: 300px;
+      background-color: cyan;
+      margin-left: 100px;
+    }
+    .sun{
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      position: absolute;
+      left: 50px;
+      top: 50px;
+    }
+  </style>
+</head>
+<body>
+<div class="father">
+  <div class="son">
+    <div class="sun"></div>
+  </div>
+</div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+//      offset相对于body的位置
+//      console.log($(".sun").offset().left);
+//      $(".sun").offset({left:500,top:500});
+//      position相对于有定位的父元素
+//      console.log($(".sun").position().left);
+//      console.log($(".sun").position().top);
+//      position只能获取不能设置，是只读的，设置要用css
+      $(".sun").css({left:100,top:100});
+    });
+</script>
+</body>
+</html>

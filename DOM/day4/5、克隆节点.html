@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div id="box">
+  我是div的内容
+  <span>呵呵</span>
+</div>
+
+<p id="des">我是外面的一个p元素</p>
+<script>
+  var box = document.getElementById("box");
+  var des = document.getElementById("des");
+  //直接把外面的P元素添加到div中
+  box.appendChild(des);
+  //克隆一个P元素添加到div中
+//  var newP = des.cloneNode(true);
+//  newP.id = "des";
+//  box.appendChild(newP);
+
+</script>
+</body>
+</html>

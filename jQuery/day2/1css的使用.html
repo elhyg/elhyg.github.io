@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<ul>
+  <li>貂蝉</li>
+  <li>西施</li>
+  <li>杨贵妃</li>
+  <li>王昭君</li>
+</ul>
+<script src="jquery-1.12.4.js"></script>
+<script>
+//  $("li").css("backgroundColor","red");
+//    $("li").css({
+//      backgroundColor:"red",
+//      color: "#fff"
+//    })
+  $("li").eq(0).css("fontSize",30);
+  $("li").eq(1).css("fontSize",16);
+  $("li").eq(2).css("fontSize",24);
+  $("li").eq(3).css("fontSize",40);
+  alert($("li").css("fontSize"));
+//  设置的时候所有的都是设置一样的样式
+//  获取的之后只能获取到第一个的样式
+
+</script>
+</body>
+</html>

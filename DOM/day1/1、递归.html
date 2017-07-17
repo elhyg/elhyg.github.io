@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+//  计算1-100的和
+//  function getSum(n) {
+//    if(n == 1){
+//      return 1;
+//    }
+//    return n + getSum(n-1);
+//  }
+//console.log(getSum(100));
+//  斐波那契数列
+  function naqi(n) {
+    if(n == 1 || n == 2){
+      return 1;
+    }
+    return naqi(n-1) +　naqi(n-2);
+  }
+console.log(naqi(12));
+</script>
+</body>
+</html>

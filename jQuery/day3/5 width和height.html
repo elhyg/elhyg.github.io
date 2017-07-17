@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div{
+      width: 400px;
+      height: 400px;
+      padding: 10px;
+      background-color: skyblue;
+      border: 10px solid cyan;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+//      $("div").width("800");
+      console.log($("div").innerWidth());//width + padding
+      console.log($("div").outerWidth());//width + padding + border
+      console.log($("div").outerWidth(true));//width + padding + border + margin
+    });
+</script>
+</body>
+</html>

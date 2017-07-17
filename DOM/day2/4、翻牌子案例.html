@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn">
+<select>
+  <option>盖伦</option>
+  <option>皇子</option>
+  <option>阿卡丽</option>
+  <option>寒冰</option>
+  <option>赵信</option>
+  <option>蛮王</option>
+  <option>伊泽瑞尔</option>
+  <option>猴子</option>
+  <option>阿狸</option>
+</select>
+<script>
+  var btn = document.getElementById("btn");
+  var options = document.getElementsByTagName("option");
+  btn.onclick = function () {
+    var random = parseInt(Math.random() * options.length);
+    options[random].selected = true;
+  }
+</script>
+</body>
+</html>

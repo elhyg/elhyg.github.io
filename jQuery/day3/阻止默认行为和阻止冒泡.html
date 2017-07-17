@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<a href="dao.html">我是一个链接</a>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+      $("a").on("click",function (e) {
+//        e.preventDefault();
+//        e.stopPropagation();
+        return false;//既阻止默认行为又阻止冒泡，在jquery才行
+      })
+      $(document).on("click",function () {
+        console.log("哈哈哈哈");
+      })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" value="饮料">
+<script src="jquery-1.12.4.js"></script>
+<script>
+  $(function () {
+    $("input").focus(function () {
+      if($(this).val() == "饮料"){
+        $(this).val("");
+      }
+    })
+    $("input").blur(function () {
+      if($(this).val() == ""){
+        $(this).val("饮料");
+      }
+    })
+  })
+
+</script>
+</body>
+</html>

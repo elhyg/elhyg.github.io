@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div><h3>哈哈哈哈</h3></div>
+  <script src="jquery-1.12.4.js"></script>
+  <script>
+      $(function () {
+        //不穿参数就是获取，传参数就是设置
+        //console.log($("div").html());//可以识别标签，会把标签一起获取到
+        //console.log($("div").text());//不能识别标签，会把标签丢弃掉
+        $("div").html("<h5>嘻嘻嘻嘻嘻</h5>");//设置的时候也能识别标签
+        //$("div").text("<h5>嘻嘻嘻嘻嘻</h5>");//不能识别标签，标签被转义了
+
+      });
+  </script>
+</body>
+</html>

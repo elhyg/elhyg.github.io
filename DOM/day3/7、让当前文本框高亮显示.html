@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text"><br>
+<input type="text">
+<script>
+  var inputs = document.getElementsByTagName("input");
+  for(var i = 0; i < inputs.length; i++){
+    inputs[i].onfocus = function () {
+      for(var i = 0; i < inputs.length; i++){
+        inputs[i].style.backgroundColor = "";
+      }
+      this.style.backgroundColor = "pink";
+    }
+  }
+
+
+</script>
+</body>
+</html>

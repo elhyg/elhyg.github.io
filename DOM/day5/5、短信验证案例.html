@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="button" value="点击获取短信验证码" id="btn">
+<script>
+  var btn = document.getElementById("btn");
+  var timer;
+  btn.onclick =function () {
+    var num = 5;
+    btn.disabled = true;
+    timer = setInterval(function () {
+      num--;
+      btn.value = num + "秒后重新发送";
+      if(num == 0){
+        btn.disabled = false;
+        btn.value = "点击获取验证码";
+        clearInterval(timer);
+      }
+    },1000)
+  }
+</script>
+</body>
+</html>

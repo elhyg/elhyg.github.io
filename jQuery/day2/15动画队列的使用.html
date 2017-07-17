@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div{
+      width: 200px;
+      height: 40px;
+      margin: 100px auto;
+      background-color: cyan;
+      /*display: none;*/
+      text-align: center;
+      line-height: 40px;
+      position: absolute;
+    }
+
+  </style>
+</head>
+<body>
+  <div>我是提示消息</div>
+  <script src="jquery-1.12.4.js"></script>
+  <script>
+//    所有动画一起执行
+//    $("div").animate({left:800,top:400,width:400});
+//    动画按照顺序一步步执行
+    $("div").animate({left:800}).delay(1000).animate({top:400}).delay(1000).animate({width:400});
+//    $("div").fadeIn(1000).delay(5000).fadeOut();
+  </script>
+</body>
+</html>

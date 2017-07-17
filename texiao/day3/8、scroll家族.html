@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+    好多蚊子
+  </div>
+</body>
+<script>
+  var box = document.getElementById("box");
+  box.onscroll = function () {
+    console.log(box.scrollTop);
+  }
+</script>
+</html>

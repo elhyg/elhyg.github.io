@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="box">
+    <p>1</p>
+    <!--我是注释-->
+    <p>2</p>
+    <p>3</p>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <script>
+//    var box = document.getElementById("box");
+//    var nodes = box.childNodes;
+//    var arr = [];
+//    for(var i = 0; i < nodes.length; i++){
+//      if(nodes[i].nodeType == 1){
+//        arr.push(nodes[i]);
+//      }
+//    }
+//    console.log(arr);
+    var box = document.getElementById("box");
+    var nodes = box.children;
+    for(var i = 0; i < nodes.length; i++){
+      if(i % 2 == 0){
+        nodes[i].style.backgroundColor = "yellow"
+      }else{
+        nodes[i].style.backgroundColor = "green"
+      }
+    }
+
+  </script>
+</body>
+</html>

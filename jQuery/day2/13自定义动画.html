@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      position: absolute;
+    }
+    .box2{
+      background-color: blue;
+      margin-top: 150px;
+    }
+    .box3{
+      background-color: yellowgreen;
+      margin-top: 300px;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="开始">
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<script src="jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+      $("input").click(function () {
+        $(".box1").animate({left:800},8000)
+        $(".box2").animate({left:800},8000,"swing")
+        $(".box3").animate({left:800},8000,"linear",function () {
+          console.log("我到了，哈哈哈");
+        })
+      })
+    });
+</script>
+</body>
+</html>

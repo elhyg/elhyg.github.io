@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text" value="饮料" id="btn">
+<script>
+  var input = document.getElementById("btn");
+  btn.onfocus = function () {
+    if(this.value == "饮料"){
+      this.value = "";
+    }
+    btn.onblur = function () {
+      if(this.value == ""){
+        this.value = "饮料";
+      }
+    }
+  }
+</script>
+</body>
+</html>
